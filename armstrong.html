@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="h1"><br>
+    <label for="">out put</label><h2 id="h"></h2>
+    <button onclick="calculate()"> check </button>
+    <script>
+ function calculate() {
+    var a=parseFloat(document.getElementById('h1').value)
+
+    var temp=a
+    var sum=0
+    while (temp>0) {
+        var rem=temp%10
+        var sum= sum+(rem*rem*rem)
+        temp=parseInt(temp/10)
+    }
+    if(sum==a) {
+    document.getElementById('h').innerText="this is a armstrong number"
+
+    }
+    else{
+        document.getElementById('h').innerText="this number is not armstrong"
+    }
+ }
+</script>
+</body>
+</html>

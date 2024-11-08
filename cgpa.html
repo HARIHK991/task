@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cgpa calculator</title>
+</head>
+<body>
+    <input type="text" placeholder="maths" id="sub1">
+    <input type="text" placeholder="malayalam" id="sub2">
+    <input type="text" placeholder="english" id="sub3">
+    <input type="text" placeholder="hindi" id="sub4">
+    
+    <button id="pers" onclick="calculate()">calculate</button><br>
+    <label>CGPA : </label> <h2 id="cgpa">***</h2>
+    <label>Percentage :</label> <h2 id="per">***</h2>
+    <label>GRADE :</label> <h2 id="grd">***</h2>
+
+<script>
+     function calculate() { 
+     
+var a=parseFloat(document.getElementById("sub1").value)
+var b=parseFloat(document.getElementById("sub2").value)
+var c=parseFloat(document.getElementById("sub3").value)
+var d=parseFloat(document.getElementById("sub4").value)
+var e=(a+b+c+d)/400
+var p=e*100
+    document.getElementById('per').innerHTML=p+"%"
+cgp=p/10
+document.getElementById('cgpa').innerHTML=cgp+" CGPA"
+
+
+
+if (cgp>=9 && cgp<=10) {
+document.getElementById("grd").innerHTML="A+"
+
+}
+else if (cgp>=8 && cgp<9) {
+    document.getElementById("grd").innerHTML="A"   
+
+}
+else if (cgp>=7 && cgp<8) {
+    document.getElementById("grd").innerHTML="B+"
+    
+}
+else if (cgp>=6 && cgp<7) {
+     document.getElementById("grd").innerHTML="C+"
+}
+else if (cgp>=5 && cgp<6) {
+     document.getElementById("grd").innerHTML="C"
+
+}
+
+else if (cgp>=0 && cgp<5) {
+     document.getElementById("grd").innerHTML="F"
+   
+}
+
+     }
+
+
+
+</script>
+
+
+
+    
+</body>
+</html>
